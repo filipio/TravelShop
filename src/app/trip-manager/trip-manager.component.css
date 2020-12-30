@@ -1,0 +1,24 @@
+.trips{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.trip{
+  border: 5px solid white;
+  margin: 5px;
+}
+
+.cheapest-trip{
+  border:5px solid red;
+}
+
+.most-expensive-trip{
+  border:5px solid green;
+}
+
+.reserved-counter{
+  background-color: red;
+  font-size: 2.7em;
+  margin: 25px;
+  font-family: sans-serif;
+}

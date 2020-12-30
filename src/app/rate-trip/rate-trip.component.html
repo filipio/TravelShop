@@ -1,0 +1,10 @@
+<div class="stars abs-centered">
+  <div *ngFor="let star of stars, index as i"
+  [ngStyle]="{'background-color' : star.clicked || star.hoovered ? '#ffeb00': '#d6d6d6'}"
+  (click)="handleStarClick(i)" class="star"
+  (mouseenter) = "handleStarMouseEnter(i)"
+  (mouseleave) = "handleStarMouseLeave(i)">
+  </div>
+</div>
+
+<button class="rate-btn abs-centered" (click)="rateTrip()" type="text">rate</button>

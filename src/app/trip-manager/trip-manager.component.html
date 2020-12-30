@@ -1,0 +1,17 @@
+<search-trip [tripsInfo] = "tripsInfo" (destinationChange) = "onDestinationChange($event)"  (endDateChange)="onEndDateChanged($event)" (ratingChange) = "onRatingChanged($event)" (priceRangeChange)="onPriceRangeChanged($event)" (beginDateChange)="onBeginDateChanged($event)"></search-trip>
+<div class="trips">
+  <trip class="trip" *ngFor="let trip of (trips |
+    searchDate : minDate : maxDate |
+    searchPrice : minPrice : maxPrice |
+    searchRating : rating |
+    searchDestination :destination)"
+    [trip] = "trip" (tripRemoved)="onTripRemoved($event)"
+    [ngClass]= 
+    "{
+    'cheapest-trip': isCheapest(trip),
+    'most-expensive-trip': isMostExpensive(trip)
+    }">
+  </trip>
+</div>
+<button class="btn-primary" (click)= "checkCount()">check counting</button>
+<img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">

@@ -1,0 +1,34 @@
+<div class="row ml-0 mr-0 mb-3" style="margin-top:60px;">
+  <div class="p-0 col-md-2 dropdown">
+      <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{destination}}
+      </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <span class="dropdown-item" *ngFor="let trip of getUniqueTripDest()" (click)="handleTripDestChange(trip.destination)">{{trip.destination}}</span>
+      <span class="dropdown-item" (click)="handleTripDestChange(any.value)" #any>any</span>
+    </div>
+  </div>
+  <div class="col-md-2 p-0 dropdown">
+    <button class="btn dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown">
+      {{rating}}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <span class="dropdown-item" *ngFor="let rating of ratings" (click)="handleTripRatingChange(rating)">{{rating}}</span>
+    </div>
+  </div>
+</div>
+<div class="row ml-3 mr-0 mb-3">
+  <label for="beginDateInput" class="p-0 col-md-1">begin date</label>
+  <div class="p-0 col-md-3">
+    <input type="date" [ngModel]="undefined" (ngModelChange)="handleBeginDateChange($event)" min ="{{getMinDate()|date:'yyyy-MM-dd'}}" max="{{getMaxDate()|date:'yyyy-MM-dd'}}" class="form-control form-control-sm" id="beginDateInput">
+  </div>
+</div>
+<div class="row ml-3 mr-0 mb-3">
+  <label for="endDateInput" class="p-0 col-md-1">end date</label>
+  <div class="p-0 col-md-3">
+    <input type="date" (ngModelChange)="handleEndDateChange($event)" [ngModel]="undefined" min ="{{getMinDate()|date:'yyyy-MM-dd'}}" max="{{getMaxDate()|date:'yyyy-MM-dd'}}" class="form-control form-control-sm" id="endDateInput">
+  </div>
+</div>
+<div class="row ml-0 mr-0">
+  <ngx-slider class="col-md-6 offset-md-3" (userChangeEnd)="handleUserChangeEnd($event)" [(value)]="value" [(highValue)]="highValue" [options]="getOptions()"></ngx-slider>
+</div>
