@@ -4,13 +4,12 @@
     <div class="image-wrapper">
       <img style="width:100%; height:auto;" [src]='trip.photo' [ngStyle]="{'opacity':freeSeats === 0 ? 0 : 1}">
     </div>
-    <div id="seats">
-      <div id="seatsNumber" [ngStyle]="{'background-color' : seatsAppearance.seatsColor(freeSeats)}">
-        {{freeSeats}}
-      </div> 
-      <span>free places</span>
-    </div>
-    <span id="destination">{{trip.destination | uppercase}}</span>
+  </div>
+  <div id="seats">
+    <div id="seatsNumber" [ngStyle]="{'background-color' : seatsAppearance.seatsColor(freeSeats)}">
+      {{freeSeats}}
+    </div> 
+    <span>free places</span>
   </div>
   <h3>{{trip.name | uppercase}}</h3>
   <div [ngClass]="{'stars abs-centered': anyStar, 'blank' : !anyStar}">
@@ -19,17 +18,15 @@
     [ngStyle]="{'background-color' : '#ffeb00'}">
     </div>
   </div>
-  <p>from {{trip.beginDate |date:'dd-MM-yyyy'}} to {{trip.endDate | date:'dd-MM-yyyy'}} </p>
+  <p>{{trip.destination}}</p>
   <p class="line"></p>
-  <p>{{trip.description}}</p>
+  <p>from {{trip.beginDate |date:'dd-MM-yyyy'}} to {{trip.endDate | date:'dd-MM-yyyy'}} </p>
   <p class="line"></p>
   <p>{{trip.price|currency}}</p>
   <p class="line"></p>
   <button class="r-button" (click)="removeReservation()" id="remove" [hidden]="freeSeats === trip.maxSeats">-</button>
   <button class="r-button" (click)="addReservation()" id="add" [hidden]="freeSeats === 0">+</button>
-  <rate-trip (tripRated)="handleTripRated($event)"></rate-trip>
+    <a routerLink="/Trips/{{trip.name}}" routerLinkActive="active" class="view">Details</a>
 </div>
 <remove-trip (removed)="handleRemoved()"></remove-trip>
-<button class="button btn-primary" (click) = "serviceGetTripWithNameTest()">testService</button>
-<button class="button btn-primary" (click) = "showTripFromServiceName()">show Name</button>
-<a routerLink="/Trips/{{trip.name}}" routerLinkActive="active" class="nav-link">details</a>
+

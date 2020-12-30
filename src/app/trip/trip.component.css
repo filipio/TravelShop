@@ -30,13 +30,13 @@
 }
 
 .image-wrapper{
-  width:267px;
+  width:275px;
   height:178px;
   margin: 0 auto;
 }
 
-.trip-card .top-wrapper span,
-.trip-card .top-wrapper #seats{
+.trip-card span,
+.trip-card #seats{
   position: absolute;
 }
 
@@ -48,6 +48,31 @@
   background-color: #acacac29;
   border-radius: 6px;
   font-family: cursive;
+}
+
+.view{
+  width:100px;
+  margin-top:12px;
+  font-size:1.4em;
+  border:2px solid cornflowerblue;
+  border-radius:16px;
+  color: black;
+  padding: 10px 20px;
+  text-decoration:none;
+  display:inline-block;
+  transition: background-color 0.5s, color 0.5s;
+}
+.view:hover{
+  background-color: cornflowerblue;
+  color:white;
+}
+.view:focus{
+  background-color: cornflowerblue;
+  color:white;
+  outline:none;
+}
+.view:active{
+  text-decoration:underline;
 }
 
 .trip-card .r-button{
@@ -71,8 +96,8 @@
 }
 
 #seats{
-  bottom: 0;
-  left: 0;
+  top: 10px;
+  right: 0;
   width:70px;
   height:70px;
 }

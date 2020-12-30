@@ -8,7 +8,7 @@
       "price":2000,
       "maxSeats":15,
       "description":"Play with Messi on Camp Nou!",
-      "photo":"https://images.unsplash.com/photo-1504913659239-6abc87875a63?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      "photo":"https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":3
       },
     "2":
@@ -20,7 +20,7 @@
       "price":1500,
       "maxSeats":30,
       "description":"Learn sth about Germany",
-      "photo":"../assets/travelPhoto2.jpg",
+      "photo":"https://images.unsplash.com/photo-1560969184-10fe8719e047?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":2
       },
     "3":
@@ -32,7 +32,7 @@
       "price":5000,
       "maxSeats":10,
       "description":"City of love is waiting for you",
-      "photo":"../assets/travelPhoto2.jpg",
+      "photo":"https://images.unsplash.com/photo-1431274172761-fca41d930114?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":5
       },
     "4":
@@ -44,7 +44,7 @@
       "price":10000,
       "maxSeats":40,
       "description":"Check out night life in New York",
-      "photo":"../assets/travelPhoto2.jpg",
+      "photo":"https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80",
       "rating":4
       },
     "5":
@@ -56,31 +56,31 @@
       "price":1400,
       "maxSeats":25,
       "description":"Glory is waiting for you",
-      "photo":"../assets/travelPhoto2.jpg",
+      "photo":"https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":4
       },
     "6":
       {
       "name":"Far East",
-      "destination":"Japan",
+      "destination":"Tokio",
       "beginDate":"2020-12-28",
       "endDate":"2021-01-01",
       "price":9500,
       "maxSeats":33,
       "description":"Celebrate new year in Japan!",
-      "photo":"../assets/travelPhoto2.jpg",
+      "photo":"https://images.unsplash.com/photo-1549693578-a094e577de3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":1
       },
     "7":
       {
       "name":"Brasil Festivals",
-      "destination":"Brasil",
+      "destination":"Sao Paulo",
       "beginDate":"2020-03-01",
       "endDate":"2020-04-07",
       "price":9400,
       "maxSeats":55,
       "description":"Dance during Brasilian festivals!",
-      "photo":"../assets/travelPhoto2.jpg",
+      "photo":"https://images.unsplash.com/photo-1561592390-15138c22896a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1054&q=80",
       "rating":0
       },
     "8":
@@ -92,19 +92,19 @@
       "price":1400,
       "maxSeats":7,
       "description":"Spend two months in Norway!",
-      "photo":"../assets/travelPhoto2.jpg",
+      "photo":"https://images.unsplash.com/photo-1579643750393-0c5456f4ecc3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":4
       },
     "9":
       {
       "name":"Queen is waiting",
-      "destination":"England",
+      "destination":"London",
       "beginDate":"2020-08-04",
       "endDate":"2020-09-05",
       "price":3400,
       "maxSeats":20,
       "description":"How Queen's life looks like?",
-      "photo":"../assets/travelPhoto2.jpg",
+      "photo":"https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       "rating":5
       },
     "10":
@@ -116,7 +116,7 @@
       "price":12000,
       "maxSeats":55,
       "description":"Find out why people love China",
-      "photo":"../assets/travelPhoto2.jpg",
+      "photo":"https://images.unsplash.com/photo-1517309230475-6736d926b979?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":3
       }
   }
