@@ -4,8 +4,8 @@
         {{destination}}
       </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <span class="dropdown-item" *ngFor="let trip of getUniqueTripDest()" (click)="handleTripDestChange(trip.destination)">{{trip.destination}}</span>
-      <span class="dropdown-item" (click)="handleTripDestChange(any.value)" #any>any</span>
+      <span class="dropdown-item text-center pl-0 pr-0" *ngFor="let trip of getUniqueTripDest()" (click)="handleTripDestChange(trip.destination)">{{trip.destination}}</span>
+      <span class="dropdown-item text-center pl-0 pr-0" (click)="handleTripDestChange(any.value)" #any>any</span>
     </div>
   </div>
   <div class="col-md-2 p-0 dropdown">
@@ -13,7 +13,7 @@
       {{rating}}
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <span class="dropdown-item" *ngFor="let rating of ratings" (click)="handleTripRatingChange(rating)">{{rating}}</span>
+      <span class="dropdown-item text-center pl-0 pr-0" *ngFor="let rating of ratings" (click)="handleTripRatingChange(rating)">{{rating}}</span>
     </div>
   </div>
 </div>

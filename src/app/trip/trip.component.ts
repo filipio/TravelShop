@@ -21,16 +21,7 @@ export class TripComponent implements OnInit{
   anyStar : boolean;
   tripFromService : TripModel;
 
-  constructor(private basketService : BasketService, private db : DbServiceService){
-  }
-
-  showTripFromServiceName(){
-    console.log(this.tripFromService.name);
-  }
-
-  serviceGetTripWithNameTest(){
-    console.log("in test method");
-    this.db.getTrip(this.trip.name).subscribe(data => this.tripFromService = data);
+  constructor(private basketService : BasketService){
   }
 
   ngOnInit(){

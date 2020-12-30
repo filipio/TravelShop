@@ -7,7 +7,6 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { TripManagerComponent } from './trip-manager/trip-manager.component';
 import { TripComponent } from './trip/trip.component';
-import { TripService } from './tripService';
 import { RemoveTripComponent } from './remove-trip/remove-trip.component';
 import { AddTripComponent } from './add-trip/add-trip.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -58,7 +57,7 @@ const routes: Routes = [
     AngularFireDatabaseModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [TripService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

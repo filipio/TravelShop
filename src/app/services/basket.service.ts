@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { TripModel } from 'src/models/trip-model';
 import { BasketItem } from '../shopping-basket/basket-item';
 
 @Injectable({
@@ -25,10 +23,8 @@ export class BasketService {
     let checkedBasketItem = this.basketItems.find(t => t.name === item.name);
     if(checkedBasketItem){
       checkedBasketItem.count++;
-      console.log("increasing counter of some trip");
     }
     else{
-      console.log("creating new basket item");
       let newItem : BasketItem = {
         destination: item.destination,
         name: item.name,

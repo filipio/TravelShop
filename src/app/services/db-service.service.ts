@@ -1,8 +1,8 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { AngularFireDatabase} from '@angular/fire/database';
-import { Observable, pipe } from 'rxjs';
+import { Observable } from 'rxjs';
 import {of} from 'rxjs';
-import { map, filter } from 'rxjs/operators';
+import { map} from 'rxjs/operators';
 import { TripModel } from 'src/models/trip-model';
 @Injectable({
   providedIn: 'root'
@@ -37,18 +37,14 @@ export class DbServiceService{
 
   getTrip(name : String) : Observable<TripModel>{
     let searchedTrip  = this.trips.find((trip) => trip.name === name);
-    console.log("found trip with name :  " + searchedTrip.name);
-    console.log("argument trip name : " + name );
     return of(searchedTrip);
   }
 
   addTrip(trip : TripModel){
     this.db.list(this.path).push(trip);
-    console.log("change. itemsCount is equal to : " + this.itemsCount);
   }
 
   removeTrip(key : string){
-    console.log("removing key : " + key);
     this.db.list(this.path).remove(key);
   }
 

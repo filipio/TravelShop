@@ -1,0 +1,30 @@
+.my-card{
+  margin:100px auto;
+  width: 50%;
+  margin-bottom:50px;
+}
+
+.r-button{
+  border:0;
+  font-size: 2em;
+  padding:10px;
+  border-radius:5px;
+  font-family: cursive;
+}
+
+.reserve-text{
+  font-weight: 900;
+}
+
+#add{
+  float:right;
+}
+#remove{
+  float:left;
+}
+
+.back-button{
+  padding: 10px 30px;
+  font-size: 1.2em;
+  margin-bottom:20px;
+}

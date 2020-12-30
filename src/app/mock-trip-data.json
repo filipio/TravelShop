@@ -7,7 +7,7 @@
       "endDate":"2020-07-15",
       "price":2000,
       "maxSeats":15,
-      "description":"Play with Messi on Camp Nou!",
+      "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis non autem, sapiente dolore adipisci magni harum voluptatum, excepturi natus reiciendis nobis consectetur, ex tenetur alias ad mollitia iure quaerat deleniti corrupti! Earum deleniti ratione, doloremque adipisci in quo aliquam! Aliquid porro error fuga laudantium corrupti eligendi molestiae nam officia.",
       "photo":"https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":3
       },
@@ -19,7 +19,7 @@
       "endDate":"2020-04-04",
       "price":1500,
       "maxSeats":30,
-      "description":"Learn sth about Germany",
+      "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis non autem, sapiente dolore adipisci magni harum voluptatum, excepturi natus reiciendis nobis consectetur, ex tenetur alias ad mollitia iure quaerat deleniti corrupti! Earum deleniti ratione, doloremque adipisci in quo aliquam! Aliquid porro error fuga laudantium corrupti eligendi molestiae nam officia.",
       "photo":"https://images.unsplash.com/photo-1560969184-10fe8719e047?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":2
       },
@@ -31,7 +31,7 @@
       "endDate":"2020-07-30",
       "price":5000,
       "maxSeats":10,
-      "description":"City of love is waiting for you",
+      "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis non autem, sapiente dolore adipisci magni harum voluptatum, excepturi natus reiciendis nobis consectetur, ex tenetur alias ad mollitia iure quaerat deleniti corrupti! Earum deleniti ratione, doloremque adipisci in quo aliquam! Aliquid porro error fuga laudantium corrupti eligendi molestiae nam officia.",
       "photo":"https://images.unsplash.com/photo-1431274172761-fca41d930114?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":5
       },
@@ -43,7 +43,7 @@
       "endDate":"2020-07-10",
       "price":10000,
       "maxSeats":40,
-      "description":"Check out night life in New York",
+      "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis non autem, sapiente dolore adipisci magni harum voluptatum, excepturi natus reiciendis nobis consectetur, ex tenetur alias ad mollitia iure quaerat deleniti corrupti! Earum deleniti ratione, doloremque adipisci in quo aliquam! Aliquid porro error fuga laudantium corrupti eligendi molestiae nam officia.",
       "photo":"https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80",
       "rating":4
       },
@@ -55,7 +55,7 @@
       "endDate":"2020-07-20",
       "price":1400,
       "maxSeats":25,
-      "description":"Glory is waiting for you",
+      "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis non autem, sapiente dolore adipisci magni harum voluptatum, excepturi natus reiciendis nobis consectetur, ex tenetur alias ad mollitia iure quaerat deleniti corrupti! Earum deleniti ratione, doloremque adipisci in quo aliquam! Aliquid porro error fuga laudantium corrupti eligendi molestiae nam officia.",
       "photo":"https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":4
       },
@@ -67,7 +67,7 @@
       "endDate":"2021-01-01",
       "price":9500,
       "maxSeats":33,
-      "description":"Celebrate new year in Japan!",
+      "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis non autem, sapiente dolore adipisci magni harum voluptatum, excepturi natus reiciendis nobis consectetur, ex tenetur alias ad mollitia iure quaerat deleniti corrupti! Earum deleniti ratione, doloremque adipisci in quo aliquam! Aliquid porro error fuga laudantium corrupti eligendi molestiae nam officia.",
       "photo":"https://images.unsplash.com/photo-1549693578-a094e577de3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":1
       },
@@ -79,7 +79,7 @@
       "endDate":"2020-04-07",
       "price":9400,
       "maxSeats":55,
-      "description":"Dance during Brasilian festivals!",
+      "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis non autem, sapiente dolore adipisci magni harum voluptatum, excepturi natus reiciendis nobis consectetur, ex tenetur alias ad mollitia iure quaerat deleniti corrupti! Earum deleniti ratione, doloremque adipisci in quo aliquam! Aliquid porro error fuga laudantium corrupti eligendi molestiae nam officia.",
       "photo":"https://images.unsplash.com/photo-1561592390-15138c22896a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1054&q=80",
       "rating":0
       },
@@ -91,7 +91,7 @@
       "endDate":"2020-04-02",
       "price":1400,
       "maxSeats":7,
-      "description":"Spend two months in Norway!",
+      "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis non autem, sapiente dolore adipisci magni harum voluptatum, excepturi natus reiciendis nobis consectetur, ex tenetur alias ad mollitia iure quaerat deleniti corrupti! Earum deleniti ratione, doloremque adipisci in quo aliquam! Aliquid porro error fuga laudantium corrupti eligendi molestiae nam officia.",
       "photo":"https://images.unsplash.com/photo-1579643750393-0c5456f4ecc3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":4
       },
@@ -103,7 +103,7 @@
       "endDate":"2020-09-05",
       "price":3400,
       "maxSeats":20,
-      "description":"How Queen's life looks like?",
+      "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis non autem, sapiente dolore adipisci magni harum voluptatum, excepturi natus reiciendis nobis consectetur, ex tenetur alias ad mollitia iure quaerat deleniti corrupti! Earum deleniti ratione, doloremque adipisci in quo aliquam! Aliquid porro error fuga laudantium corrupti eligendi molestiae nam officia.",
       "photo":"https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       "rating":5
       },
@@ -115,7 +115,7 @@
       "endDate":"2020-05-03",
       "price":12000,
       "maxSeats":55,
-      "description":"Find out why people love China",
+      "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi officiis non autem, sapiente dolore adipisci magni harum voluptatum, excepturi natus reiciendis nobis consectetur, ex tenetur alias ad mollitia iure quaerat deleniti corrupti! Earum deleniti ratione, doloremque adipisci in quo aliquam! Aliquid porro error fuga laudantium corrupti eligendi molestiae nam officia.",
       "photo":"https://images.unsplash.com/photo-1517309230475-6736d926b979?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "rating":3
       }

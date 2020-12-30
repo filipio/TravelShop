@@ -1,10 +1,23 @@
-<h1>trip-details works!</h1>
-<div>
-  <img src="{{trip.photo}}" style = "width: 300px; height: 700px;">
+<div class="card my-card text-center">
+  <img src="{{trip.photo}}" class="card-img-top">
+  <div class="card-body">
+    <h3 class="card-title">{{trip.name}}</h3>
+    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint repellat harum cumque voluptatum minus, asperiores at consequuntur placeat libero error reprehenderit nostrum corporis nisi, voluptatem doloremque dolore magnam! Fugiat, consequuntur at. Officiis culpa, saepe in maxime ex perspiciatis id quod possimus suscipit, reiciendis distinctio. Mollitia quae eos veritatis accusantium corporis?</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{trip.destination}}</li>
+    <li class="list-group-item">from {{trip.beginDate |date:'dd-MM-yyyy'}} to {{trip.endDate | date:'dd-MM-yyyy'}}</li>
+    <li class="list-group-item">{{trip.price|currency}}</li>
+    <li class="list-group-item">seats available : {{freeSeats}}</li>
+    <li class="list-group-item"><rate-trip></rate-trip></li>
+    <li class="list-group-item reserve-text">{{reserveText}}</li>
+    <li class="list-group-item">
+      <button class="r-button" (click)="removeReservation()" id="remove" [hidden]="freeSeats === trip.maxSeats">-</button>
+      <button class="r-button" (click)="addReservation()" id="add" [hidden]="freeSeats === 0">+</button>
+    </li>
+  </ul>
 </div>
-{{trip.name}}<br>
-{{trip.destination}}<br>
-{{trip.beginDate}}<br>
-{{trip.endDate}}<br>
-{{trip.price}}<br>
-<button class="btn btn-primary" (click) = "goBack()">go back</button>
+<div style="text-align:center;">
+  <button class="btn btn-primary back-button"  (click) = "goBack()">go back</button>
+</div>
+

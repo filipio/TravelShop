@@ -11,12 +11,16 @@ import { DbServiceService } from '../services/db-service.service';
 
 export class AddTripComponent implements OnInit {
 
-  defaultPhoto : string = "/src/assets/travelPhoto2.jpg";
   modelForm : FormGroup;
+  tripWasAdded : boolean = false;
 
   constructor(private formBuilder : FormBuilder, private service : DbServiceService){}
 
   ngOnInit() : void {
+    this.newForm();
+  }
+
+  newForm(){
     this.modelForm = this.formBuilder.group({
       name: ['',Validators.compose([Validators.pattern('[a-zA-z!? ]*'), Validators.maxLength(20)])],
       destination: ['',Validators.required],
@@ -24,24 +28,28 @@ export class AddTripComponent implements OnInit {
       endDate: ['',Validators.required],
       price: ['',Validators.compose([Validators.required,Validators.max(30000)])],
       maxSeats: ['',Validators.required],
-      description: ['', Validators.maxLength(30)],
-      photo: ['', Validators.required]
+      description: ['', Validators.maxLength(400)],
+      photo: ['', Validators.required],
+      rating: ['', Validators.required]
     });
   }
 
+  addNewTrip(){
+    this.tripWasAdded = false;
+  }
 
-  onSubmit(name : String, destination: String, beginDate : string, endDate: string, price: string, maxSeats: string, description : String, photo: String)
+
+  onSubmit(name : String, destination: String, beginDate : string, endDate: string, price: string, maxSeats: string, description : String, photo: String, rating: string)
     {
       if(name === "")
         name = "Awesome trip!";
       if(description === "")
         description = "You won't regret it!";
         
-      let newTrip : TripModel = new TripModel(name,destination,beginDate,endDate,Number.parseInt(price),Number.parseInt(maxSeats),description,photo,0);
-
-      console.log("adding trip in AddTripComponent");
-      console.log("trips key : " + newTrip.key);
+      let newTrip : TripModel = new TripModel(name,destination,beginDate,endDate,Number.parseInt(price),Number.parseInt(maxSeats),description,photo,Number.parseInt(rating));
       this.service.addTrip(newTrip);
+      this.tripWasAdded = true;
+      this.newForm();
     }
 
   }

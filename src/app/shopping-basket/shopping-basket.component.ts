@@ -17,7 +17,6 @@ export class ShoppingBasketComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    console.log("ngOnInit is called in shoppingBasketComponent");
     this.totalCount = this.basketService.totalCount;
     this.totalPrice  = this.basketService.totalPrice;
     this.basketItems = this.basketService.basketItems;
