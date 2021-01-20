@@ -3,6 +3,7 @@ import {TripModel} from '../../models/trip-model';
 import { TripsInfo } from './trips-info';
 import { ChangeContext } from '@angular-slider/ngx-slider';
 import { DbServiceService } from '../services/db-service.service';
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'trip-manager',
   templateUrl: './trip-manager.component.html',
@@ -23,17 +24,18 @@ export class TripManagerComponent{
   destination : string;
   tripsInfo : TripsInfo = new TripsInfo();
 
-  constructor(private service:DbServiceService){
+  constructor(private service:DbServiceService, private auth : AuthService){
     service.getTrips().subscribe({next : (data) =>{
       this.trips = data;
       this.tripDetails();
       this.tripsInfo.updateInfo(this.trips)}
+      
     });
   }
 
-  checkCount(){
-    let counter = this.service.itemsCount;
-    console.log("counter is equal to : " + counter);
+  checkLogin(){
+    let logged = this.auth.isLoggedIn();
+    console.log("is logged in : " + logged);
   }
 
   onEndDateChanged(newEndDate: Date){
@@ -55,6 +57,10 @@ export class TripManagerComponent{
 
   onDestinationChange(dest : string){
     this.destination = dest;
+  }
+
+  shouldBeVisible(trip : TripModel){
+
   }
 
 
@@ -87,6 +93,12 @@ export class TripManagerComponent{
     this.service.removeTrip(trip.key);
     this.tripDetails();
     this.tripsInfo.updateInfo(this.trips);
+  }
+
+  isVisible(trip : TripModel){
+    if(new Date() >= new Date(trip.beginDate) && this.auth.isUserOnlyReader())
+      return false;
+    return true;
   }
 
 }

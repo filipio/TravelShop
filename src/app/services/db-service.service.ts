@@ -18,7 +18,7 @@ export class DbServiceService{
   }
 
   private getRawData() : Observable<any>{
-    return this.db.list(this.path).snapshotChanges();
+    return this.db.list(this.path).snapshotChanges()
   }
 
   private getObjectData(data : Observable<any>) : Observable<any>{
@@ -35,7 +35,7 @@ export class DbServiceService{
   }
 
 
-  getTrip(name : String) : Observable<TripModel>{
+  getTripByName(name : String) : Observable<TripModel>{
     let searchedTrip  = this.trips.find((trip) => trip.name === name);
     return of(searchedTrip);
   }
@@ -48,4 +48,12 @@ export class DbServiceService{
     this.db.list(this.path).remove(key);
   }
 
+  updateTrip(key : string, value: any){
+    this.db.list(this.path).update(key,value);
+  }
+
+  // getTrip(key : string){
+  //   console.log("getting trip");
+  //   return this.getObjectData(this.db.object(this.path + key).snapshotChanges()); // moze nie dzialac ;p 
+  // }
 }

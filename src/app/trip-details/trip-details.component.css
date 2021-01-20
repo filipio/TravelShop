@@ -28,3 +28,8 @@
   font-size: 1.2em;
   margin-bottom:20px;
 }
+
+.card-edit-mode{
+  margin:100px 0;
+  width: 50%;
+}

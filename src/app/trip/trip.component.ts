@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {TripModel} from '../../models/trip-model';
+import { AuthService } from '../services/auth.service';
 import { BasketService } from '../services/basket.service';
 import { DbServiceService } from '../services/db-service.service';
 import {FreeSeatsAppearance} from './FreeSeatsAppearance';
@@ -20,8 +21,9 @@ export class TripComponent implements OnInit{
   currTripRating:number = 0;
   anyStar : boolean;
   tripFromService : TripModel;
+  today : Date = new Date();
 
-  constructor(private basketService : BasketService){
+  constructor(private basketService : BasketService, private authService : AuthService){
   }
 
   ngOnInit(){
@@ -46,6 +48,10 @@ export class TripComponent implements OnInit{
 
   handleTripRated(rating:number){
     this.currTripRating = rating;
+  }
+
+  canDelete(){
+    return this.authService.isUserAdmin();
   }
 
 }

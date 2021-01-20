@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {AngularFireModule } from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
@@ -21,14 +22,18 @@ import { SearchDestination } from './trip-manager/trip-search-destination';
 import { ShoppingBasketComponent } from './shopping-basket/shopping-basket.component';
 import { Routes, RouterModule } from '@angular/router';
 import { TripDetailsComponent } from './trip-details/trip-details.component';
+import { LoginComponent } from './login/login.component';
+import { LoggedGuard } from './guards/logged.guard';
+import { EditTripComponent } from './edit-trip/edit-trip.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Trips', pathMatch:'full'},
-  { path: 'Trips', component: TripManagerComponent },
+  { path: 'Trips', component: TripManagerComponent, canActivate: [LoggedGuard] },
   { path: 'New_Trip', component: AddTripComponent},
   { path: 'Basket', component: ShoppingBasketComponent},
   { path: 'Trips/:id', component: TripDetailsComponent},
-  { path: '**', component: TripManagerComponent }];
+  { path: 'Login', component: LoginComponent},
+  { path: '**', component: LoginComponent }];
 
 
 @NgModule({
@@ -47,6 +52,8 @@ const routes: Routes = [
     SearchDestination,
     ShoppingBasketComponent,
     TripDetailsComponent,
+    LoginComponent,
+    EditTripComponent,
   ],
   imports: [
     NgxSliderModule,
@@ -55,7 +62,8 @@ const routes: Routes = [
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig ),
     AngularFireDatabaseModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

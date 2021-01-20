@@ -1,15 +1,17 @@
 <search-trip [tripsInfo] = "tripsInfo" (destinationChange) = "onDestinationChange($event)"  (endDateChange)="onEndDateChanged($event)" (ratingChange) = "onRatingChanged($event)" (priceRangeChange)="onPriceRangeChanged($event)" (beginDateChange)="onBeginDateChanged($event)"></search-trip>
 <div class="trips">
-  <trip class="trip" *ngFor="let trip of (trips |
-    searchDate : minDate : maxDate |
-    searchPrice : minPrice : maxPrice |
-    searchRating : rating |
-    searchDestination :destination)"
-    [trip] = "trip" (tripRemoved)="onTripRemoved($event)"
+  <ng-container *ngFor="let trip of (trips |
+  searchDate : minDate : maxDate |
+  searchPrice : minPrice : maxPrice |
+  searchRating : rating |
+  searchDestination :destination)">
+    <trip *ngIf="isVisible(trip)" [trip] = "trip" (tripRemoved)="onTripRemoved($event)"
     [ngClass]= 
     "{
     'cheapest-trip': isCheapest(trip),
     'most-expensive-trip': isMostExpensive(trip)
     }">
-  </trip>
+    </trip>
+  </ng-container>
 </div>
+<button (click)="checkLogin()" class="btn btn-secondary">sprawdz zalogowanie!</button>

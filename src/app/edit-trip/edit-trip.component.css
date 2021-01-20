@@ -1,0 +1,19 @@
+.form{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.form-name-item{
+  width: 30%;
+  display:block;
+}
+
+.form-item{
+  width: 70%;
+  display:block;
+}
+
+.save-btn{
+  width:30%;
+  text-align: center;
+}

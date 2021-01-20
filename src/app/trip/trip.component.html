@@ -6,8 +6,8 @@
     </div>
   </div>
   <div id="seats">
-    <div id="seatsNumber" [ngStyle]="{'background-color' : seatsAppearance.seatsColor(freeSeats)}">
-      {{freeSeats}}
+    <div id="seatsNumber" [ngStyle]="{'background-color' : seatsAppearance.seatsColor(trip.availableSeats)}">
+      {{trip.availableSeats}}
     </div> 
     <span>free places</span>
   </div>
@@ -28,5 +28,5 @@
   <button class="r-button" (click)="addReservation()" id="add" [hidden]="freeSeats === 0">+</button>
     <a routerLink="/Trips/{{trip.name}}" routerLinkActive="active" class="view">Details</a>
 </div>
-<remove-trip (removed)="handleRemoved()"></remove-trip>
 
+<!-- <remove-trip *ngIf ="canDelete()" (removed)="handleRemoved()"></remove-trip> -->

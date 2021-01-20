@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-body">
+
+    <div class="input-group mb-3" style="margin-top: 20px;">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Login</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+            [(ngModel)]="credentials.email">
+    </div>
+    <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Hasło</span>
+          </div>
+          <input type="password" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+            [(ngModel)]="credentials.password">
+    </div>
+
+  <div *ngIf="alertVisible" class="alert alert-danger alert-dismissible fade show" role="alert">
+          {{errorInfo}}
+          <button type="button" class="close" (click)="hideAlert()" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+
+    <button type="button" class="btn btn-primary float-left" (click)="register()">Zarejestruj się</button>
+    <button type="button" class="btn btn-primary float-right" (click)="login()">Zaloguj się</button>
+
+
+  </div>
+</div>

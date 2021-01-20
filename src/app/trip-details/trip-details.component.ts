@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TripModel } from 'src/models/trip-model';
 import { Location } from '@angular/common';
@@ -10,25 +10,34 @@ import { BasketService } from '../services/basket.service';
   templateUrl: './trip-details.component.html',
   styleUrls: ['./trip-details.component.css']
 })
-export class TripDetailsComponent implements OnInit {
+export class TripDetailsComponent implements OnInit, OnChanges {
 
   trip : TripModel;
   freeSeats : number;
   reserveText:string;
+  editMode : boolean = false;
 
   constructor(
     private db : DbServiceService,
     private route : ActivatedRoute,
     private location: Location,
-    private basketService : BasketService){}
+    private basketService : BasketService){console.log("constructor called");}
+
+
+  ngOnChanges(): void {
+    console.log("on changes called");
+  }
+
+
 
   ngOnInit(): void {
+    console.log("init called");
     this.getTripData();
   }
 
   getTripData(){
     const id = this.route.snapshot.paramMap.get('id');
-    this.db.getTrip(id).subscribe(data => {
+    this.db.getTripByName(id).subscribe(data => {
       this.trip = data;
       this.freeSeats = this.trip.maxSeats - this.basketService.reservedTrips(this.trip);
       this.setReservationText();
@@ -42,6 +51,10 @@ export class TripDetailsComponent implements OnInit {
     else{
       this.reserveText = "NO MORE FREE SEATS.";
     }
+  }
+
+  runEditMode(){
+    this.editMode = true;
   }
 
   removeReservation(){
@@ -58,6 +71,11 @@ export class TripDetailsComponent implements OnInit {
 
   goBack(){
     this.location.back();
+  }
+
+  onTripUpdated(updatedTrip : TripModel){
+    this.trip = updatedTrip;
+    this.editMode = false;
   }
 
 }

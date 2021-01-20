@@ -4,14 +4,20 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <li class="navbar-item">
+      <li class="navbar-item" *ngIf = "auth.isLoggedIn()">
         <a routerLink="/Trips" routerLinkActive="active" class="nav-link">Trips</a>
       </li>
-      <li class="navbar-item">
+      <li class="navbar-item" *ngIf = "auth.isLoggedIn()">
         <a routerLink="/New_Trip" routerLinkActive="active" class="nav-link">New trip</a>
       </li>
-      <li class="navbar-item">
+      <li class="navbar-item" *ngIf = "auth.isLoggedIn()" >
         <a routerLink="/Basket" routerLinkActive="active" class="nav-link">Basket</a>
+      </li>
+      <li class="navbar-item" *ngIf = "!auth.isLoggedIn()">
+        <a routerLink="/Login" routerLinkActive="active" class="nav-link">Login</a>
+      </li>
+      <li class="navbar-item" *ngIf = "auth.isLoggedIn()">
+        <a class="nav-link" (click)="logout()">logout</a>
       </li>
     </ul>
   </div>

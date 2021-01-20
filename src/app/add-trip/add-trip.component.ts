@@ -46,7 +46,8 @@ export class AddTripComponent implements OnInit {
       if(description === "")
         description = "You won't regret it!";
         
-      let newTrip : TripModel = new TripModel(name,destination,beginDate,endDate,Number.parseInt(price),Number.parseInt(maxSeats),description,photo,Number.parseInt(rating));
+      let newTrip : TripModel = new TripModel({name : name,destination : destination,beginDate : beginDate,endDate : endDate,price : Number.parseInt(price),maxSeats:Number.parseInt(maxSeats),description:description,photo:photo,rating: Number.parseInt(rating)});
+      newTrip.availableSeats = newTrip.maxSeats;
       this.service.addTrip(newTrip);
       this.tripWasAdded = true;
       this.newForm();
@@ -54,3 +55,13 @@ export class AddTripComponent implements OnInit {
 
   }
 
+  // key:string;
+  // name:String;
+  // destination:String;
+  // beginDate:string;
+  // endDate:string;
+  // price:number;
+  // maxSeats:number;
+  // description:String;
+  // photo:String;
+  // rating:number;
