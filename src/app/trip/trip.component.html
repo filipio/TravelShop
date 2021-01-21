@@ -1,8 +1,8 @@
 <div class="trip-card">
-  <div [ngClass]="{'x-sign': freeSeats === 0}"></div>
+  <div [ngClass]="{'x-sign': trip.availableSeats === 0}"></div>
   <div class="top-wrapper">
     <div class="image-wrapper">
-      <img style="width:100%; height:auto;" [src]='trip.photo' [ngStyle]="{'opacity':freeSeats === 0 ? 0 : 1}">
+      <img style="width:100%; height:auto;" [src]='trip.photo' [ngStyle]="{'opacity':trip.availableSeats === 0 ? 0 : 1}">
     </div>
   </div>
   <div id="seats">
@@ -24,8 +24,8 @@
   <p class="line"></p>
   <p>{{trip.price|currency}}</p>
   <p class="line"></p>
-  <button class="r-button" (click)="removeReservation()" id="remove" [hidden]="freeSeats === trip.maxSeats">-</button>
-  <button class="r-button" (click)="addReservation()" id="add" [hidden]="freeSeats === 0">+</button>
+  <button class="r-button" (click)="removeReservation()" id="remove" [hidden]="!canRemoveReservation()">-</button>
+  <button class="r-button" (click)="addReservation()" id="add" [hidden]="!canAddReservation()">+</button>
     <a routerLink="/Trips/{{trip.name}}" routerLinkActive="active" class="view">Details</a>
 </div>
 

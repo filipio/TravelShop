@@ -27,10 +27,9 @@ export class AuthService {
   user : any;
   usersRoles = new Map<string, string[]>();
 
-  constructor(private afAuth : AngularFireAuth, private usersService : UsersService, private db : DbServiceService) {
+  constructor(private afAuth : AngularFireAuth, private usersService : UsersService) {
     this.afAuth.setPersistence('session');
-    this.afAuth.authState.subscribe(data => {this.user = data; });
-
+    this.afAuth.authState.subscribe(data => {this.user = data; if(data) this.usersService.loggedMail = data.email});
     this.usersService.getUserRoles().subscribe(roles => {
       roles.forEach(userRole => {
         console.log("email : " + userRole.email);
